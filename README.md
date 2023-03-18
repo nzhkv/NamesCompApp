@@ -9,7 +9,7 @@
   <li>Implemented a smooth transition to the first screen</li>
   <li>With an Alert if not all fields are filled (each field has its own individual alert).</li>
   <li>Transferring parameters between ViewControllers</li>
-  <li>Customized UX.</li>
+  <li>Customized UI.</li>
 </ul>
 
  
