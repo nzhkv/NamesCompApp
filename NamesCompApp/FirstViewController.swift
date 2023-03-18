@@ -65,9 +65,32 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func resultButtonTapped() {
-        performSegue(withIdentifier: "goToResult", sender: nil)
+        guard let firstName = yourNameTF.text, let secondName = partnerNameTF.text else { return }
+        if firstName.isEmpty && secondName.isEmpty {
+            showAlert(title: "Names are missing", message: "Please enter both names")
+        } else if firstName.isEmpty {
+            showAlert(title: "Names are missing", message: "Please enter your name")
+        } else if secondName.isEmpty {
+            showAlert(title: "Names are missing", message: "Please enter your partner's names")
+        } else {
+            performSegue(withIdentifier: "goToResult", sender: nil)
+        }
     }
     
+    @IBAction func unwindSegueToFirstVC(segue: UIStoryboardSegue) {
+        yourNameTF.text = ""
+        partnerNameTF.text = ""
+    }
+    
+}
+
+extension FirstViewController {
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 
 extension FirstViewController: UITextFieldDelegate {
