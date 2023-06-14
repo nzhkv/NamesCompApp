@@ -7,9 +7,9 @@
 ## Two-screen application - compatibility check for names (without scientific basis).
 <ul>
   <li>Implemented a smooth transition to the first screen</li>
-  <li>With an Alert if not all fields are filled (each field has its own individual alert).</li>
+  <li>With an Alert if not all fields are filled (each field has its own individual alert)</li>
   <li>Transferring parameters between ViewControllers</li>
-  <li>Customized UI.</li>
+  <li>Customized UI</li>
 </ul>
 
  
