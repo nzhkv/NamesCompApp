@@ -11,5 +11,3 @@
   <li>Transferring parameters between ViewControllers</li>
   <li>Customized UI</li>
 </ul>
-
- 
